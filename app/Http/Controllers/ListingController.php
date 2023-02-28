@@ -15,8 +15,9 @@ class ListingController extends Controller
      * @param  mixed $request
      * @return void
      */
-    public function index(ListingRequest $request)
+    public function index()
     {
+        return view('listings.index');
     }
     /**
      * store
