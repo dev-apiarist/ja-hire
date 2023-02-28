@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ListingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::prefix('listings')->group(function () {
+    Route::get('/', [ListingController::class, 'index'])->name('index');
+    Route::post('/', [ListingController::class, 'store'])->name('store');
+    Route::get('/create', [ListingController::class, 'create'])->name('create');
+    Route::get('/{listing}/edit', [ListingController::class, 'edit'])->name('edit');
+    Route::delete('/{listing}', [ListingController::class, 'delete'])->name('delete');
+    Route::pur('/{listing}', [ListingController::class, 'update'])->name('update');
+    Route::get('/manage', [ListingController::class, 'manage'])->name('manage');
+    Route::get('/{listing}', [ListingController::class, 'show'])->name('show');
 });
