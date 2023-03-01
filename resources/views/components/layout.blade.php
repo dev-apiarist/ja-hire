@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    @vite('resources/css/app.css')
+    <link rel="stylesheet" href="https://kit.fontawesome.com/bc19a19734.css" crossorigin="anonymous">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-@include('partials._header')
 
 <body>
+
+        <x-cursor />
+    @include('partials._header')
     {{ $slot }}
+    @include('partials._footer')
 </body>
 
 </html>
