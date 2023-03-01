@@ -16,13 +16,15 @@
 </head>
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100 relative">
 
     <x-cursor />
     @include('partials._header')
 
 
+    {{-- <div class="flex flex-col min-h-screen"> --}}
     {{ $slot }}
+    {{-- </div> --}}
 
 
     @include('partials._footer')

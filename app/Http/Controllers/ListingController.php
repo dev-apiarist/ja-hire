@@ -38,6 +38,7 @@ class ListingController extends Controller
      */
     public function show(ListingRequest $request, Listing $listing)
     {
+        return view('listings.show', ['listing' => $listing]);
     }
     /**
      * create
