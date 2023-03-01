@@ -8,6 +8,7 @@
     <title>Document</title>
     @vite('resources/css/app.css')
 </head>
+@include('partials._header')
 
 <body>
     {{ $slot }}
