@@ -3,10 +3,12 @@
 @tailwind utilities;
 
 *{
-    cursor: none;
+    /* border: 1px solid black; */
+    cursor: none !important;
 }
 
 .inner-cursor{
+    z-index: 50;
     position: fixed;
     left: 10px;
     width: 10px;
@@ -14,7 +16,7 @@
     transform: translate(-50%,-50%);
     background-color: #fff;
     mix-blend-mode: difference;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     pointer-events: none;
     transition: width 0.5s, height 0.5s;
 }
@@ -23,9 +25,16 @@
     width: 25px;
     height: 25px;
     transition: width 0.5s ,height 0.5s;
+    border-radius: 50%;
+}
+.outer-cursor.round{
+
+    border-radius: 50%;
 }
 
+
 .outer-cursor{
+    z-index: 50;
     position: fixed;
     left: 10px;
     width: 25px;
@@ -33,7 +42,7 @@
     transform: translate(-50%,-50%);
     border:1px solid #fff;
     mix-blend-mode: difference;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     pointer-events: none;
     transition:  0.1s;
 }

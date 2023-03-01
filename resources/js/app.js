@@ -16,13 +16,17 @@ function moveCursor(e){
     outerCursor.style.top = `${y}px`;
 
     let links = Array.from(document.querySelectorAll('a'));
+    let buttons = Array.from(document.querySelectorAll('button'));
+    let ctas = links.concat(buttons);
 
-    links.forEach(link=>{
-        link.addEventListener("mouseover", ()=>{
+    ctas.forEach(cta=>{
+        cta.addEventListener("mouseover", ()=>{
             innerCursor.classList.add('grow');
+            outerCursor.classList.add('round');
         });
-        link.addEventListener("mouseleave", ()=>{
+        cta.addEventListener("mouseleave", ()=>{
             innerCursor.classList.remove('grow');
+            outerCursor.classList.remove('round');
         });
     })
 }
