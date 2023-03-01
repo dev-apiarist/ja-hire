@@ -17,7 +17,7 @@ class ListingController extends Controller
      */
     public function index(ListingRequest $request)
     {
-        $listings = Listing::all();
+        $listings = Listing::latest()->simplePaginate(6);
         return view('listings.index', ['listings' => $listings]);
     }
     /**

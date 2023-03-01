@@ -18,8 +18,7 @@
         {{ $listing->company }}
     </h3>
 
-    <x-listing-tags :tagsCsv="$listing->tags"
-        class="border-gray-300 hover:bg-black hover:text-white transition-all ease-linear " />
+    <x-listing-tags :tagsCsv="$listing->tags" class="border-gray-300 " />
     <p class="mt-2 text-sm leading-relaxed text-gray-500 line-clamp-3">
         {{ $listing->description }}
     </p>

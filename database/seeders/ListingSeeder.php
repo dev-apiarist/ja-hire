@@ -19,6 +19,6 @@ class ListingSeeder extends Seeder
             'name' => 'Kenni Leslie',
             'email' => 'admin@ja.hire.com'
         ]);
-        Listing::factory(6)->create(['user_id' => $user->id]);
+        Listing::factory(10)->create(['user_id' => $user->id]);
     }
 }

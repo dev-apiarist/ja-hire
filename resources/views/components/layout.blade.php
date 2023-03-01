@@ -16,7 +16,7 @@
 </head>
 </head>
 
-<body class="bg-gray-100 relative">
+<body class="bg-gray-100 relative ">
 
     <x-cursor />
     @include('partials._header')
