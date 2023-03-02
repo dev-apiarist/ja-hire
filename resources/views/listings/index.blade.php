@@ -8,8 +8,9 @@
             @foreach ($listings as $listing)
                 <x-listing-card :listing='$listing' />
             @endforeach
-            <span class="ml-auto col-span-3 ">
+            <span class="col-span-1  md:col-span-2 lg:col-span-3 ">
                 {{ $listings->links() }}
+
             </span>
 
         </div>
