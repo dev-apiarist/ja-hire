@@ -48,7 +48,7 @@ class ListingController extends Controller
      */
     public function create(ListingRequest $request)
     {
-        return view('lisitngs.create');
+        return view('listings.create');
     }
     /**
      * delete
