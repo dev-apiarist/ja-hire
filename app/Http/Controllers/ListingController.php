@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ListingRequest;
 use App\Models\Listing;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use App\Http\Requests\ListingRequest;
 
 class ListingController extends Controller
 {
@@ -28,6 +29,21 @@ class ListingController extends Controller
      */
     public function store(ListingRequest $request)
     {
+
+
+        // Log::info('here');
+        $formFields = $request->validated();
+        // if ($request->hasFile('logo')) {
+        //     $formFields['logo'] = $request->file('logo')->store('logos', 'public');
+        // }
+
+        // $formFields['user_id'] = auth()->id();
+        Listing::create($formFields);
+
+
+
+        return redirect()->route('index');
+        // ->with('message', 'Listing Created Successfully')
     }
     /**
      * show
